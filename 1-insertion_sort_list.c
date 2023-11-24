@@ -10,7 +10,7 @@ void swap_nodes(listint_t **head, listint_t **n1, listint_t **n2)
 	listint_t *tmp;
 	listint_t *tmp1 = (*n1)->next;
 	listint_t *tmp2 = (*n2)->next;
-	
+
 	(*n1)->next = tmp2;
 	(*n2)->next = tmp1;
 	if (tmp2 != NULL)
@@ -29,7 +29,7 @@ void swap_nodes(listint_t **head, listint_t **n1, listint_t **n2)
 	(*n1)->prev = (*n2)->prev;
 	(*n2)->prev = tmp;
 }
-/*
+/**
  * insertion_sort_list - Sorts a doubly linked list of integers
  *                       using the insertion sort algorithm.
  * @list: A pointer to the head of a doubly-linked list of integers.
@@ -39,13 +39,14 @@ void swap_nodes(listint_t **head, listint_t **n1, listint_t **n2)
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *head, *cursor;
-	if (!*list)
-		return ;
+
+	if (!list || !*list)
+		return;
 	head = *list;
 	while (head != NULL)
 	{
 		cursor = head->prev;
-		while(cursor)
+		while (cursor)
 		{
 			if (cursor->n > head->n)
 			{
