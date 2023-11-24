@@ -37,8 +37,11 @@ void selection_sort(int *array, size_t size)
 				min = array[j];
 			}
 		}
-		swap_ints(&array[indxmin], &array[i]);
-		print_array(array, size);
+		if (indxmin != i)
+		{
+			swap_ints(&array[indxmin], &array[i]);
+			print_array(array, size);
+		}
 	}
 }
 
