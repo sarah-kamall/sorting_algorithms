@@ -85,6 +85,7 @@ void quickrec(int *array, int size, int low, int high)
 void quick_sort(int *array, size_t size)
 {
 	long int s;
+
 	s = size;
 	quickrec(array, s, 0, s - 1);
 }
