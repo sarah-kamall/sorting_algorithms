@@ -26,7 +26,7 @@ void selection_sort(int *array, size_t size)
 	size_t i, j, indxmin;
 	int min;
 
-	for (i=0; i < size; i++)
+	for (i = 0; i < size; i++)
 	{
 		min = INT_MAX;
 		for (j = i; j < size; j++)
